@@ -17,7 +17,7 @@ const Sidebar = () => {
 
 	return (
 		<div
-			className={`bg-nokia-blue h-screen p-5 pt-8 ${
+			className={`bg-nokia-blue p-5 pt-8 min-h-screen ${
 				open ? 'w-72' : 'w-20'
 			} duration-300 relative`}
 		>
@@ -30,13 +30,13 @@ const Sidebar = () => {
 			<div className="inline-flex">
 				<Link to="/">
 					<BiTask
-						className={`bg-amber-300 text-4xl rounded cursor-pointer mr-6 duration-300 ${
+						className={`bg-amber-300 text-4xl rounded cursor-pointer mr-4 duration-300 ${
 							open && 'rotate-[360deg]'
 						}`}
 					/>
 				</Link>
 				<h1
-					className={`text-white origin-left font-medium text-2xl duration-300 ${
+					className={`text-white origin-left font-medium text-2xl mr-4 duration-300 ${
 						!open && 'scale-0 opacity-0'
 					}`}
 				>
@@ -45,18 +45,15 @@ const Sidebar = () => {
 			</div>
 
 			<ul className="mt-16">
-				{menus.map((menu, index) => (
+				{menus.map(menu => (
 					<>
 						<Link
 							to={`${menu.title === 'Home' ? '/' : menu.title.toLowerCase()}`}
 						>
-							<li
-								key={index}
-								className="text-white text-center text-lg flex item-center gap-x-11 cursor-pointer p-2 hover:bg-light-white rounded-md mt-12"
-							>
+							<li className="text-white text-center text-lg flex item-center gap-x-11 cursor-pointer p-2 hover:bg-light-white rounded-md mt-12">
 								<span className="text-2xl">{menu.icon}</span>
 								<span
-									className={`text-base font-medium ml-8 duration-300 ${
+									className={`text-base font-medium ml-6 duration-300 ${
 										!open && 'scale-0 opacity-0'
 									}`}
 								>
