@@ -6,6 +6,7 @@ module.exports = {
 			colors: {
 				'nokia-blue': '#00439c',
 				'light-white': 'rgba(255, 255, 255, 0.17)',
+				'light-gray': '#f9fafb',
 			},
 		},
 	},

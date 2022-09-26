@@ -18,7 +18,7 @@ const Sidebar = () => {
 	return (
 		<div
 			className={`bg-nokia-blue h-screen p-5 pt-8 ${
-				open ? 'w-1/3 lg:w-72' : 'w-20'
+				open ? 'w-72' : 'w-20'
 			} duration-300 relative`}
 		>
 			<BsArrowLeftShort
@@ -30,7 +30,7 @@ const Sidebar = () => {
 			<div className="inline-flex">
 				<Link to="/">
 					<BiTask
-						className={`bg-amber-300 text-4xl rounded cursor-pointer mr-3 duration-300 ${
+						className={`bg-amber-300 text-4xl rounded cursor-pointer mr-6 duration-300 ${
 							open && 'rotate-[360deg]'
 						}`}
 					/>
@@ -56,7 +56,7 @@ const Sidebar = () => {
 							>
 								<span className="text-2xl">{menu.icon}</span>
 								<span
-									className={`text-base font-medium ml-4 duration-300 ${
+									className={`text-base font-medium ml-8 duration-300 ${
 										!open && 'scale-0 opacity-0'
 									}`}
 								>
