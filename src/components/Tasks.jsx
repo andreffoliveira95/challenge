@@ -33,15 +33,17 @@ const Tasks = () => {
 			<Navbar />
 			<div className="flex">
 				<Sidebar />
-				<section className="p-8 flex flex-col justify-center items-center w-screen min-h-screen">
-					<h1 className="text-black origin-left font-medium text-2xl mb-4">
+				<section className="top-20 bg-light-gray w-screen h-screen px-12 flex flex-col justify-center items-center">
+					<h1 className="text-black origin-left font-medium text-2xl text-center mt-8 mb-6">
 						Task List
 					</h1>
-					<ul className="mx-5 p-5 rounded-lg h-screen bg-white w-full">
-						{tasks.map(task => {
-							return <Task key={task.id} {...task} />;
-						})}
-					</ul>
+					<div className="w-full h-full overflow-y-scroll scroll scrollbar-hide">
+						<div className="px-10 py-2 inline-block rounded-lg h-screen bg-light-gray w-full">
+							{tasks.map(task => {
+								return <Task key={task.id} {...task} />;
+							})}
+						</div>
+					</div>
 				</section>
 			</div>
 		</>

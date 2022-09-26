@@ -21,7 +21,7 @@ const Sidebar = () => {
 			} duration-500 relative flex flex-col item-center`}
 		>
 			<BsArrowLeftShort
-				className={`bg-white text-nokia-blue text-3xl rounded-full hidden absolute -right-3 top-9 border-2 border-nokia-blue cursor-pointer 
+				className={`bg-light-gray text-nokia-blue text-3xl rounded-full hidden absolute -right-3 top-9 border-2 border-nokia-blue cursor-pointer 
                 ${!open && 'rotate-180'} duration-500 sm:block`}
 				onClick={() => setOpen(!open)}
 			/>
@@ -35,7 +35,7 @@ const Sidebar = () => {
 					/>
 				</Link>
 				<h1
-					className={`text-white hidden sm:inline origin-left font-medium text-2xl mr-4 duration-500 ${
+					className={`text-light-gray hidden sm:inline origin-left font-medium text-2xl mr-4 duration-500 ${
 						!open && 'scale-0 opacity-0'
 					}`}
 				>
@@ -48,8 +48,11 @@ const Sidebar = () => {
 					<>
 						<Link
 							to={`${menu.title === 'Home' ? '/' : menu.title.toLowerCase()}`}
+							onClick={() => {
+								open === false ? setOpen(false) : setOpen(true);
+							}}
 						>
-							<li className="text-white text-center text-lg flex justify-between cursor-pointer p-2 hover:bg-light-white rounded-md mt-12">
+							<li className="text-light-gray text-center text-lg flex justify-between cursor-pointer p-2 hover:bg-light-white rounded-md mt-12">
 								<span className="text-2xl">{menu.icon}</span>
 								<span
 									className={`text-base item-center font-medium hidden sm:inline duration-300 ${

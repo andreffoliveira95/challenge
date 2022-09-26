@@ -6,19 +6,21 @@ import Error404 from './components/Error404';
 
 function App() {
 	return (
-		<Router>
-			<Switch>
-				<Route exact path="/">
-					<Home />
-				</Route>
-				<Route path="/tasks">
-					<Tasks />
-				</Route>
-				<Route path="*">
-					<Error404 />
-				</Route>
-			</Switch>
-		</Router>
+		<div className="w-full h-full">
+			<Router>
+				<Switch>
+					<Route exact path="/">
+						<Home />
+					</Route>
+					<Route path="/tasks">
+						<Tasks />
+					</Route>
+					<Route path="*">
+						<Error404 />
+					</Route>
+				</Switch>
+			</Router>
+		</div>
 	);
 }
 
