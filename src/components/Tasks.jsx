@@ -33,11 +33,11 @@ const Tasks = () => {
 			<Navbar />
 			<div className="flex">
 				<Sidebar />
-				<section className="p-5 pt-8 text-center w-full min-h-screen min-w-max">
+				<section className="p-8 flex flex-col justify-center items-center w-screen min-h-screen">
 					<h1 className="text-black origin-left font-medium text-2xl mb-4">
 						Task List
 					</h1>
-					<ul className="mx-5 p-5 rounded-lg h-screen bg-white">
+					<ul className="mx-5 p-5 rounded-lg h-screen bg-white w-full">
 						{tasks.map(task => {
 							return <Task key={task.id} {...task} />;
 						})}
