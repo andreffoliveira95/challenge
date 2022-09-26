@@ -1,7 +1,14 @@
+import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
+
 function App() {
 	return (
 		<>
-			<h1>Hello World</h1>
+			<Navbar />
+			<hr className="border-dark-purple"></hr>
+			<div className="flex">
+				<Sidebar />
+			</div>
 		</>
 	);
 }
