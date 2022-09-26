@@ -2,24 +2,19 @@ import { useEffect, useState } from 'react';
 
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
-import Loading from './Loading';
 import Task from './Task';
 
 const url = 'http://localhost:8080/api/tasks/';
 
 const Tasks = () => {
-	const [loading, setLoading] = useState(false);
 	const [tasks, setTasks] = useState([]);
-	const [index, setIndex] = useState(0);
 
 	const fetchTasks = async () => {
 		try {
 			const response = await fetch(url);
 			const data = await response.json();
-			const task = data[index];
-			console.log(task);
-			setIndex(index + 1);
-			setTasks([...tasks, task]);
+			console.log(data);
+			setTasks(data);
 		} catch (error) {
 			console.log(error);
 		}
@@ -27,11 +22,11 @@ const Tasks = () => {
 
 	useEffect(() => {
 		fetchTasks();
+		const interval = setInterval(() => {
+			fetchTasks();
+		}, 60000);
+		return () => clearInterval(interval);
 	}, []);
-
-	if (loading) {
-		return <Loading />;
-	}
 
 	return (
 		<>
