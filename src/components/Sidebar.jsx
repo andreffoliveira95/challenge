@@ -48,9 +48,6 @@ const Sidebar = () => {
 					<>
 						<Link
 							to={`${menu.title === 'Home' ? '/' : menu.title.toLowerCase()}`}
-							onClick={() => {
-								open === false ? setOpen(false) : setOpen(true);
-							}}
 						>
 							<li className="text-light-gray text-center text-lg flex justify-between cursor-pointer p-2 hover:bg-light-white rounded-md mt-12">
 								<span className="text-2xl">{menu.icon}</span>
