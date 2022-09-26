@@ -4,7 +4,7 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				'dark-purple': '#00439c',
+				'nokia-blue': '#00439c',
 				'light-white': 'rgba(255, 255, 255, 0.17)',
 			},
 		},
