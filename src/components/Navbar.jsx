@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import nokiaImg from '../assets/nokia-logo.png';
 
