@@ -21,6 +21,7 @@ const Sidebar = () => {
 			} duration-500 relative flex flex-col item-center`}
 		>
 			<BsArrowLeftShort
+				data-testid="open-close"
 				className={`bg-light-gray text-nokia-blue text-3xl rounded-full hidden absolute -right-3 top-9 border-2 border-nokia-blue cursor-pointer 
                 ${!open && 'rotate-180'} duration-500 sm:block`}
 				onClick={() => setOpen(!open)}
@@ -29,6 +30,7 @@ const Sidebar = () => {
 			<div className="inline-flex">
 				<Link to="/">
 					<BiTask
+						data-testid="app-logo"
 						className={`bg-amber-300 text-4xl rounded cursor-pointer mr-4 duration-500 ${
 							open && 'rotate-[360deg]'
 						}`}
