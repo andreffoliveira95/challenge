@@ -4,7 +4,7 @@ const Home = () => {
 	return (
 		<>
 			<section className="bg-light-gray p-5 pt-8 flex justify-center items-center text-center w-screen h-screen">
-				<div>
+				<div data-testid="welcome">
 					<h1 className="font-medium text-3xl sm:text-4xl mb-4">
 						Hi 👋, I'm André!
 					</h1>

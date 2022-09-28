@@ -5,12 +5,6 @@ import Home from '../Home';
 
 test('renders main welcome text', () => {
 	render(<Home />);
-	const headingElement = screen.getByText(/andré/i);
-	expect(headingElement).toBeInTheDocument();
-});
-
-test('renders sub-main text', () => {
-	render(<Home />);
-	const headingElement = screen.getByText(/Nokia's challenge/i);
-	expect(headingElement).toBeInTheDocument();
+	const divElement = screen.getByTestId('welcome');
+	expect(divElement).toBeInTheDocument();
 });
