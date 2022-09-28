@@ -8,6 +8,7 @@ const Navbar = () => {
 			<div className="px-2 flex justify-center items-center w-full h-full">
 				<div className="flex items-center">
 					<a
+						data-testid="nokia-logo"
 						target="_blank"
 						rel="noopener noreferrer"
 						href="https://www.nokia.com/"
